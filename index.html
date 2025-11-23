@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Kitty Party Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=MedievalSharp&family=Momo+Signature&family=Noto+Serif+JP:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=MedievalSharp&family=Momo+Signature&family=Noto+Serif+JP:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=MedievalSharp&family=Momo+Signature&family=Noto+Serif+JP:wght@200..900&family=Oswald:wght@200..700&family=Playwrite+CZ:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url("gpt.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 1rem;
+            animation: fall linear infinite;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 2s ease;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: popIn 1.5s ease;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-family: "Momo Signature", cursive;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px #000;
+            animation: glow 2s infinite alternate ease-in-out;
+            animation: blinkColors 2s infinite ease-in-out;
+        }
+
+        h1:hover {
+            color: red;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffcccc;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff;
+            }
+        }
+
+        @keyframes blinkColors {
+            0% {
+                color: #035e03;
+            }
+            33% {
+                color: #ff0000;
+            }
+            66% {
+                color: #ffffff;
+            }
+            100% {
+                color: #035e03;
+            }
+        }
+
+        .details {
+            font-size: 1.7rem;
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            line-height: 1.6;
+            margin-top: 20px;
+            animation: slideUp 1.2s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-weight: bold;
+            font-family: "Momo Signature", sans-serif;
+            font-size: 2rem;
+            animation: fadeIn 2s ease 0.5s;
+        }
+
+        @media(max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .details {
+                font-size: 1rem;
+            }
+
+            .lights {
+                gap: 10px;
+            }
+
+            .light {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .container {
+                padding-top: 140px;
+            }
+        }
+        #quote {
+            font-size: 1.7rem;
+            font-family: "Oswald", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function createSnowflakes() {
+            const snowCount = 70;
+            for (let i = 0; i < snowCount; i++) {
+                let snow = document.createElement('div');
+                snow.classList.add('snowflake');
+                snow.innerHTML = '❄';
+                snow.style.left = Math.random() * 100 + 'vw';
+                snow.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                snow.style.fontSize = (Math.random() * 15 + 10) + 'px';
+                document.body.appendChild(snow);
+            }
+        }
+        createSnowflakes();
+    </script>
+
+    <div class="container">
+
+        <div class="card">
+            <h1>Christmas Kitty Party</h1>
+            <p class="details">
+                Dear Friends,<br><br>
+                You are warmly invited to our Christmas-themed Kitty Party! <br>
+                Join us for fun, laughter, games, and festive vibes.
+                <br><br>
+                📅 <b>Date:</b> 6 December<br>
+                🕓 <b>Time:</b> 4:00 PM<br>
+                🏡 <b>Venue:</b> My House<br><br>
+                👗 <b>Dress Code:</b> White Top and Red Skirt
+            </p>
+
+            <p class="footer-text">Hosted by Reena</p>
+            <p id="quote">~Strong women, warm hearts, and endless laughter — that’s what makes our kitty family special</p>
+        </div>
+    </div>
+</body>
+
+</html>
